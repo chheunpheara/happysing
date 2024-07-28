@@ -34,6 +34,8 @@ def get_videos():
     videos = []
     for (path, name, fname) in walk(media_path):
         for n in fname:
+            ext = n.split('.')
+            if ext[-1:][0].lower() not in ['mp4']: continue
             videos.append(n)
     return videos
 
@@ -43,6 +45,8 @@ def reload_videos(playing_videos):
     videos = []
     for (path, name, fname) in walk(media_path):
         for n in fname:
+            ext = n.split('.')
+            if ext[-1:][0].lower() not in ['mp4']: continue
             if n in playing_videos: continue
             videos.append(n)
     return videos

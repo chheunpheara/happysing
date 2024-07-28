@@ -5,5 +5,5 @@ builddmg.sh
 happysign.spec
 HappySing.v01-MacOS.zip
 Test.py
-Meida/*
+Media/*
 !Media/.gitkeep
